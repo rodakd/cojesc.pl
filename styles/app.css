@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/nunito-sans/nunito-sans-v11-latin-700.eot");
+    src: local(""),
+        url("/fonts/nunito-sans/nunito-sans-v11-latin-700.eot?#iefix")
+            format("embedded-opentype"),
+        url("/fonts/nunito-sans/nunito-sans-v11-latin-700.woff2")
+            format("woff2"),
+        url("/fonts/nunito-sans/nunito-sans-v11-latin-700.woff") format("woff"),
+        url("/fonts/nunito-sans/nunito-sans-v11-latin-700.ttf")
+            format("truetype"),
+        url("/fonts/nunito-sans/nunito-sans-v11-latin-700.svg#NunitoSans")
+            format("svg");
+}
+
+@font-face {
+    font-family: "Charter";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/charter/charter_regular-webfont.eot");
+    src: local(""),
+        url("/fonts/charter/charter_regular-webfont.eot?#iefix")
+            format("embedded-opentype"),
+        url("/fonts/charter/charter_regular-webfont.woff") format("woff"),
+        url("/fonts/charter/charter_regular-webfont.ttf") format("truetype");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Nunito Sans";
+}
+
+body {
+    font-family: "Charter", Georgia, Cambria, "Times New Roman", Times, serif;
+}

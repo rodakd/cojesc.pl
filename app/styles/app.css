@@ -468,12 +468,122 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.bg-blue-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
-.text-violet-400 {
+.p-10 {
+  padding: 2.5rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
+.text-black {
   --tw-text-opacity: 1;
-  color: rgb(167 139 250 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  src: url("/fonts/nunito-sans/nunito-sans-v11-latin-700.eot");
+
+  src: local(""),
+        url("/fonts/nunito-sans/nunito-sans-v11-latin-700.eot?#iefix")
+            format("embedded-opentype"),
+        url("/fonts/nunito-sans/nunito-sans-v11-latin-700.woff2")
+            format("woff2"),
+        url("/fonts/nunito-sans/nunito-sans-v11-latin-700.woff") format("woff"),
+        url("/fonts/nunito-sans/nunito-sans-v11-latin-700.ttf")
+            format("truetype"),
+        url("/fonts/nunito-sans/nunito-sans-v11-latin-700.svg#NunitoSans")
+            format("svg");
+}
+
+@font-face {
+  font-family: "Charter";
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url("/fonts/charter/charter_regular-webfont.eot");
+
+  src: local(""),
+        url("/fonts/charter/charter_regular-webfont.eot?#iefix")
+            format("embedded-opentype"),
+        url("/fonts/charter/charter_regular-webfont.woff") format("woff"),
+        url("/fonts/charter/charter_regular-webfont.ttf") format("truetype");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito Sans";
+}
+
+body {
+  font-family: "Charter", Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
