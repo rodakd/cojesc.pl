@@ -22,8 +22,8 @@ const fontSize = {
 };
 
 const titleColors = {
-    primary: "text-black dark:text-white",
-    secondary: "text-gray-400 dark:text-blueGray-500",
+    primary: "text-black",
+    secondary: "text-gray-400",
 };
 
 function Heading({

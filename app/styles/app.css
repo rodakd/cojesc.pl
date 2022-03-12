@@ -514,6 +514,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 @font-face {
   font-family: "Nunito Sans";
 
@@ -562,13 +567,6 @@ h6 {
 
 body {
   font-family: "Charter", Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  .dark\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
 }
 
 @media (min-width: 768px) {
