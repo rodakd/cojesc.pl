@@ -1,5 +1,5 @@
 import { sanity } from "~/lib/sanity";
-import { Link, LoaderFunction, useLoaderData } from "remix";
+import { HeadersFunction, Link, LoaderFunction, useLoaderData } from "remix";
 import { H2 } from "~/components/typography";
 import { Post } from "~/types/models";
 
@@ -18,6 +18,12 @@ export const loader: LoaderFunction = async () => {
     return { posts };
 };
 
+export const headers: HeadersFunction = () => {
+    return {
+        "Cache-Control": `public, max-age=${60 * 10}, s-maxage=${60 * 10}`,
+    };
+};
+
 export default function Index() {
     const { posts } = useLoaderData<LoaderData>();
 
@@ -27,10 +33,8 @@ export default function Index() {
                 <H2>blog pupu</H2>
                 <ul className="mt-5 text-lg">
                     {posts.map((p) => (
-                        <li className="underline">
-                            <Link key={p._id} to={`post/${p.slug.current}`}>
-                                {p.title}
-                            </Link>
+                        <li key={p._id} className="underline">
+                            <Link to={`post/${p.slug.current}`}>{p.title}</Link>
                         </li>
                     ))}
                 </ul>
