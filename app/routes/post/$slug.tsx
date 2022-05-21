@@ -1,4 +1,4 @@
-import { HeadersFunction, json, LoaderFunction, useLoaderData } from "remix";
+import { LoaderFunction, useLoaderData } from "remix";
 import { sanity } from "~/lib/sanity";
 import { Post } from "~/types/models";
 
@@ -13,24 +13,7 @@ export const loader: LoaderFunction = async ({ params }) => {
             title
         }
     `);
-    return json(
-        { post: posts[0] },
-        {
-            headers: {
-                "Cache-Control": `public, max-age=${
-                    60 * 60 * 24 * 30
-                }, s-maxage=${60 * 60 * 24 * 30}`,
-            },
-        }
-    );
-};
-
-export const headers: HeadersFunction = () => {
-    return {
-        "Cache-Control": `public, max-age=${60 * 60 * 24 * 30}, s-maxage=${
-            60 * 60 * 24 * 30
-        }`,
-    };
+    return { post: posts[0] };
 };
 
 export default function Post() {
