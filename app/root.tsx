@@ -9,18 +9,36 @@ import {
 
 import type { MetaFunction } from "remix";
 import { LinksFunction } from "@remix-run/react/routeModules";
+import { Header } from "./components/Header";
 
 import styles from "./styles/app.css";
+import helpers from "./styles/helpers.css";
 
 export const meta: MetaFunction = () => {
-    return { title: "New Remix App" };
+    return { title: "Co jeść?" };
 };
 
 export const links: LinksFunction = () => {
     return [
         {
+            rel: "preconnect",
+            href: "https://fonts.googleapis.com",
+        },
+        {
+            rel: "preconnect",
+            href: "https://fonts.gstatic.com",
+        },
+        {
+            rel: "stylesheet",
+            href: "https://fonts.googleapis.com/css2?family=Kite+One&family=Square+Peg&display=swap",
+        },
+        {
             rel: "stylesheet",
             href: styles,
+        },
+        {
+            rel: "stylesheet",
+            href: helpers,
         },
     ];
 };
@@ -38,6 +56,7 @@ export default function App() {
                 <Links />
             </head>
             <body>
+                <Header />
                 <Outlet />
                 <ScrollRestoration />
                 <Scripts />

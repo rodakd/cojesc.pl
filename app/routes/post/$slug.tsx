@@ -3,7 +3,7 @@ import { sanity } from "~/lib/sanity";
 import { Post } from "~/types/models";
 
 interface LoaderData {
-    post: Post;
+    post: Post | undefined;
 }
 
 export const loader: LoaderFunction = async ({ params }) => {
