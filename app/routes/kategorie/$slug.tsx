@@ -1,16 +1,20 @@
 import { sanity } from "~/lib/sanity";
 import { LoaderFunction, useLoaderData } from "remix";
 import { Post } from "~/types/models";
-import { SanityImg } from "~/components/SanityImg";
 import { GridItem } from "~/components/GridItem";
+import { SanityImg } from "~/components/SanityImg";
+import { getNameFromSlug } from "~/lib/slugs";
 
 interface LoaderData {
     posts: Post[];
+    categoryTitle: string;
 }
 
-export const loader: LoaderFunction = async () => {
+export const loader: LoaderFunction = async ({ params }) => {
+    const categoryTitle = getNameFromSlug(params.slug);
+
     const posts = await sanity.fetch(`
-        *[_type == 'post'] {
+        *[_type == 'post' && categories[]->.title match "${categoryTitle}"] {
             _id,
             title,
             slug,
@@ -18,21 +22,22 @@ export const loader: LoaderFunction = async () => {
             publishedAt
         } | order(publishedAt desc)
     `);
-    return { posts };
+
+    return { posts, categoryTitle };
 };
 
-export default function Index() {
-    const { posts } = useLoaderData<LoaderData>();
+export default function Category() {
+    const { posts, categoryTitle } = useLoaderData<LoaderData>();
 
     return (
         <div className="max-w-[1235px] mx-auto">
-            <h4 className="my-5 text-3xl">Najnowsze</h4>
+            <h4 className="my-5 text-3xl">Kategoria "{categoryTitle}"</h4>
             <div className="grid-cols-3 grid gap-10 justify-center">
                 {posts.map((p) => {
                     return (
                         <GridItem
                             key={p._id}
-                            linkTo={`post/${p.slug.current}`}
+                            linkTo={`/post/${p.slug.current}`}
                             background={
                                 <SanityImg
                                     src={p.mainImage}

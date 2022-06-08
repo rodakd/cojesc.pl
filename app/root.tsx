@@ -12,7 +12,6 @@ import { LinksFunction } from "@remix-run/react/routeModules";
 import { Header } from "./components/Header";
 
 import styles from "./styles/app.css";
-import helpers from "./styles/helpers.css";
 
 export const meta: MetaFunction = () => {
     return { title: "Co jeść?" };
@@ -30,15 +29,11 @@ export const links: LinksFunction = () => {
         },
         {
             rel: "stylesheet",
-            href: "https://fonts.googleapis.com/css2?family=Kite+One&family=Square+Peg&display=swap",
+            href: "https://fonts.googleapis.com/css2?family=Kite+One&family=Lato:wght@300;400;700&family=Square+Peg&display=swap",
         },
         {
             rel: "stylesheet",
             href: styles,
-        },
-        {
-            rel: "stylesheet",
-            href: helpers,
         },
     ];
 };
