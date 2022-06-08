@@ -72,7 +72,7 @@ export default function Post() {
                 <DiscussionEmbed
                     shortname="cojesc"
                     config={{
-                        url: post.slug.current,
+                        url: `/post/${post.slug.current}`,
                         identifier: post._id,
                         title: post.title,
                     }}
