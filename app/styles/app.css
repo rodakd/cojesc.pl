@@ -531,6 +531,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.75rem;
 }
 
+.mb-\[100px\] {
+  margin-bottom: 100px;
+}
+
 .block {
   display: block;
 }
@@ -581,6 +585,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-\[700px\] {
+  width: 700px;
 }
 
 .max-w-\[1235px\] {
@@ -676,6 +684,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pt-0 {
+  padding-top: 0px;
 }
 
 .text-7xl {
