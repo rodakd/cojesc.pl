@@ -531,10 +531,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.75rem;
 }
 
-.mb-\[100px\] {
-  margin-bottom: 100px;
-}
-
 .block {
   display: block;
 }
@@ -579,16 +575,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10rem;
 }
 
-.w-\[600px\] {
-  width: 600px;
+.w-\[780px\] {
+  width: 780px;
 }
 
 .w-6 {
   width: 1.5rem;
-}
-
-.w-\[700px\] {
-  width: 700px;
 }
 
 .max-w-\[1235px\] {
@@ -782,6 +774,10 @@ body {
 .text-shadow {
   text-shadow: -1px -1px 0 rgb(0 0 0 / 50%), 1px -1px 0 rgb(0 0 0 / 50%),
         -1px 1px 0 rgb(0 0 0 / 50%), 1px 1px 0 rgb(0 0 0 / 50%);
+}
+
+#disqus_thread {
+  margin-top: 30px;
 }
 
 .hover\:text-amber-400:hover {

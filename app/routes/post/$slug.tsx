@@ -35,7 +35,7 @@ export default function Post() {
 
     return (
         <div className="w-full pt-10 px-10">
-            <div className="w-[700px] mx-auto max-w-full p-10 pt-0">
+            <div className="w-[780px] mx-auto max-w-full p-10 pt-0">
                 <SanityImg
                     src={post.mainImage}
                     className="w-full rounded-lg shadow-lg max-w-full"
